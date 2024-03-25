@@ -3,9 +3,240 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/index.css">
     <title>Home</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Kaisei+HarunoUmi&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Kaisei+HarunoUmi&family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Kaisei+HarunoUmi&family=Play:wght@400;700&family=Sura:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Tauri&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./Highlight/dracula.css">
+
 </head>
 <body>
+
+  
+  <div class="topnav">
+    <h2><label for="" class="codes">CODE ENGINEERING</label></h2>
+    <h2>
+      <a class="active" href="https://www.linkedin.com/in/jeselyn-tania/">Jeselyn Tania</a>
+    </h2>
+  </div>
+
+  <div class="content">
+    <div class="Header">
+      <h1 class="title">The Dispensables</h1>
+      <h2 class="smallTitle">Bad Code Smell</h2>
+    </div>
+
+    <div class="imageIlu">
+      <img src="./Images/Computer.png" class="images">
+    </div>
+
+    <div class="list">
+      <h2 class="theDis">Dispensables</h2>
+      <h3 class="short">All of the smell from the group is not an error, but it's not useful and can be delete it</h3>
+      <li><a href="#comments">Comments</a></li>
+      <li><a href="#duplicate">Duplicate Code</a></li>
+      <li><a href="#data">Data Class</a></li>
+      <li><a href="#dead">Dead Code</a></li>
+      <li><a href="#general">Speculative Generality</a></li>
+    </div>
+
+    <div class="comments" id="comments">
+      <h1 class="titleCom">Comments</h1>
+      <img src="./Images/comments.png" alt="" class="coms">
+      <div class="coms1">
+        <p>I make this comments, to make other understand. But why this is unuseful?</p>
+        <p>Why? Why my comments is trash?</p>
+      </div>
+
+      <div class="coms2">
+        <p>Well, in fact all of the programs is already explain by the method itself. But if the code is long</p>
+        <p>and the logic need to explain, it can be confirmed as a long method. But, comments can be use</p>
+        <p>as a documentation using " /** */ ", using this " // "  or " /* */ " for multiline is avoided</p>
+      </div>
+
+      <h2 class="exam1">Example</h2>
+
+      <div class="code-wrapper">
+        <pre>
+          <code id="code">
+            public class Calculator {
+
+              // This class provides basic arithmetic operations.
+          
+              // Constructor method
+              public Calculator() {
+                  // This is a constructor.
+              }
+          
+              // Method to add two numbers
+              public int add(int a, int b) {
+                  // Adds two numbers and returns the result.
+                  return a + b;
+              }
+          
+              // Method to subtract two numbers
+              public int subtract(int a, int b) {
+                  // Subtract b from a and return the result.
+                  return a - b;
+              }
+          
+              // Method to multiply two numbers
+              public int multiply(int a, int b) {
+                  // Perform multiplication operation.
+                  return a * b; // return the result
+              }
+          
+              // Method to divide two numbers
+              public int divide(int a, int b) {
+                  // Check if b is not zero
+                  if (b != 0) {
+                      // Perform division operation.
+                      return a / b; // return the result
+                  } else {
+                      // Print an error message.
+                      System.out.println("Cannot divide by zero!");
+                      // Return zero.
+                      return 0;
+                  }
+              }
+          }          
+          </code>
+      </pre>
+        <button id="copy-button">Copy</button>
+      </div>
+      <span id="copy-success">Code copied! :)</span>
+
+      <div class="coms2">
+        <p>Well, this code is not efisient because all the method is already clear and understandable</p>
+        <p>and all of the comments is not need for this case</p>
+      </div>
+  
+    </div>
+
+    <div class="duplicate" id="duplicate">
+      <h1 class="titleDu">Duplicate Code</h1>
+      <img src="./Images/Duplicate.png" alt="" class="dupli">
+      <div class="dupli1">
+        <p>Why my code is so long? It should be 50-100 lines, but this one is more than 500 lines?</p>
+        <p>Oh I forgot that I copy and paste too much, but this is so strange, the code is</p>
+        <p>running perfectly. Why this happened?</p>
+      </div>
+
+      <div class="coms2">
+        <p>That is because, there's same method, so the code still run the normal way.</p>
+        <p>But, sometimes the method is easy to identify, so the code will be easily refactor.</p>
+        <p>But again, sometimes the code has to be make in specifc to be easy to identify.</p>
+        <p>The rule of three is when you already copy and paste for 3 times, it is the time</p>
+        <p>you do a refactor code </p>
+      </div>
+
+      <h2 class="exam1">Example</h2>
+
+      <div class="code-wrapper">
+        <pre>
+          <code id="code">
+            public class Calculation {
     
+              public int add(int a, int b) {
+                  return a + b;
+              }
+              
+              public int subtract(int a, int b) {
+                  return a - b;
+              }
+              
+              public int multiply(int a, int b) {
+                  return a * b;
+              }
+              
+              public int addArrayElements(int[] array) {
+                  int sum = 0;
+                  for (int i = 0; i < array.length; i++) {
+                      sum += array[i];
+                  }
+                  return sum;
+              }
+              
+              public int multiplyArrayElements(int[] array) {
+                  int product = 1;
+                  for (int i = 0; i < array.length; i++) {
+                      product *= array[i];
+                  }
+                  return product;
+              }
+              
+              // Duplicate code starts here
+              public double calculateAverage(int[] array) {
+                  double sum = 0;
+                  for (int i = 0; i < array.length; i++) {
+                      sum += array[i];
+                  }
+                  return sum / array.length;
+              }
+              
+              public int findMax(int[] array) {
+                  int max = array[0];
+                  for (int i = 1; i < array.length; i++) {
+                      if (array[i] > max) {
+                          max = array[i];
+                      }
+                  }
+                  return max;
+              }
+              // Duplicate code ends here
+          }
+          
+          </code>
+      </pre>
+        <button id="copy-button">Copy</button>
+      </div>
+
+      <div class="coms2">
+        <p>In the above code, you can see that there is a repetition of code for</p>
+        <p>iterating over an array and performing some operation (sum or product)</p>
+        <p>on its elements. This repetition violates the DRY (Don't Repeat Yourself)</p>
+        <p>principle, which is a fundamental principle in software development. This</p>
+        <p>duplication can lead to maintenance issues because if you need to change</p>
+        <p>the logic of iterating over an array, you would have to do it in multiple</p>
+        <p>places, increasing the chances of introducing bugs and making</p>
+        <p>the code harder to maintain.</p>
+      </div>
+
+    </div>
+
+    <div class="data" id="data">
+      
+    </div>
+
+    <div class="dead" id="dead">
+      
+    </div>
+
+    <div class="general" id="general">
+      
+    </div>
+
+
+  </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+<script src="./index.js"></script>
 </body>
 </html>
