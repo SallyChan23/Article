@@ -44,7 +44,7 @@
     </div>
 
     <div class="imageIlu">
-      <img src="./Images/Computer.png" class="images">
+      <img src="./Images/Computer.png" class="dupli">
     </div>
 
     <div class="list">
@@ -52,6 +52,7 @@
       <h3 class="short">All of the smell from the group is not an error, but it's not useful and can be delete it</h3>
       <li><a href="#comments">Comments</a></li>
       <li><a href="#duplicate">Duplicate Code</a></li>
+      <li><a href="#lazy">Lazy Class</a></li>
       <li><a href="#data">Data Class</a></li>
       <li><a href="#dead">Dead Code</a></li>
       <li><a href="#general">Speculative Generality</a></li>
@@ -59,7 +60,7 @@
 
     <div class="comments" id="comments">
       <h1 class="titleCom">Comments</h1>
-      <img src="./Images/comments.png" alt="" class="coms">
+      <img src="./Images/comments.png" alt="" class="img">
       <div class="coms1">
         <p>I make this comments, to make other understand. But why this is unuseful?</p>
         <p>Why? Why my comments is trash?</p>
@@ -132,8 +133,8 @@
 
     <div class="duplicate" id="duplicate">
       <h1 class="titleDu">Duplicate Code</h1>
-      <img src="./Images/Duplicate.png" alt="" class="dupli">
-      <div class="dupli1">
+      <img src="./Images/Duplicate.png" alt="" class="img">
+      <div class="coms1">
         <p>Why my code is so long? It should be 50-100 lines, but this one is more than 500 lines?</p>
         <p>Oh I forgot that I copy and paste too much, but this is so strange, the code is</p>
         <p>running perfectly. Why this happened?</p>
@@ -218,21 +219,415 @@
         <p>places, increasing the chances of introducing bugs and making</p>
         <p>the code harder to maintain.</p>
       </div>
+    </div>
+
+    <div class="lazy" id="lazy">
+      <h1 class="titleDu">Lazy Class</h1>
+      <img src="./Images/Lazy.png" alt="" class="img">
+      <div class="coms1">
+        <p>This is neat and clean code, but there are so many classes. That make me so confused</p>
+        <p>Hmmm... Is this bad?</p>
+      </div>
+
+      <div class="coms2">
+        <p>Well yeah, make so many classes in one code can make you confused sometimes.</p>
+        <p>And also sometimes make one classes with too many components, is not good too</p>
+        <p>That's why we make a different class. But also at the sametime, too many classes</p>
+        <p>with just one function is also useless and not eficient, can make other proggrammer</p>
+        <p>get confused  when they try to understand your code, and it's call lazy class.</p>
+        <p>When there's too many classes but with just one function. Lazy class can also</p>
+        <p>happened when you are refactoring the code.</p>    
+      </div>
+
+      <h2 class="exam1">Example</h2>
+
+      <div class="code-wrapper">
+        <pre>
+          <code id="code">
+            public class Employee {
+              private String name;
+              private String id;
+              
+              public Employee(String name, String id) {
+                  this.name = name;
+                  this.id = id;
+              }
+              
+              // Getters and setters
+              public String getName() {
+                  return name;
+              }
+              
+              public void setName(String name) {
+                  this.name = name;
+              }
+              
+              public String getId() {
+                  return id;
+              }
+              
+              public void setId(String id) {
+                  this.id = id;
+              }
+          }
+          </code>
+      </pre>
+        <button id="copy-button">Copy</button>
+      </div>
+
+      <div class="coms2">
+        <p>In this example, the Employee class only contains attributes and their corresponding </p>
+        <p>getters and setters. It doesn't contain any behavior or logic specific to an employee</p> 
+        <p>such as methods for calculating salaries, managing leaves, or performing other </p> 
+        <p>employee-related tasks. To improve this class, you might consider adding more functionality</p>
+        <p>that is specific to an employee, such as methods for calculating salaries, managing leaves,</p>  
+        <p> or performing other employee-related tasks. Otherwise, if the class remains as it is, it can</p>   
+        <p>be considered a "lazy class" because it doesn't do enough to justify its existence.</p>  
+      </div>
 
     </div>
 
     <div class="data" id="data">
-      
+
+      <h1 class="titleDu">Data Class</h1>
+      <img src="./Images/Data.png" alt="" class="img">
+      <div class="coms1">
+        <p>This code is so awfull. Even though the owner of the code is doesn't understand this is</p>
+        <p>using class or a struct. Too many class are only contain a data. Hmm....</p>
+        <p>Really dude??? You are kidding me right??</p>
+      </div>
+
+      <div class="coms2">
+        <p>Well if the one class has just only contains dumb data, this class can be deleted, and</p>
+        <p>can join with other class, for example getter setter function.</p>
+        <p>This bad code is common when we developed a code for the first time. But when is almost</p>
+        <p>finish from the development process or almost finish in a mean time. This problem should</p>
+        <p>not be anymore, but if this still happened, it's time to refactor the code.</p>
+      </div>
+
+      <h2 class="exam1">Example</h2>
+
+      <div class="code-wrapper">
+        <pre>
+          <code id="code">
+            public class Customer {
+              private String name;
+              private String email;
+              private String address;
+              private String phoneNumber;
+              
+              // Constructors, getters, and setters
+              public Customer() {}
+              
+              public Customer(String name, String email, String address, String phoneNumber) {
+                  this.name = name;
+                  this.email = email;
+                  this.address = address;
+                  this.phoneNumber = phoneNumber;
+              }
+              
+              public String getName() {
+                  return name;
+              }
+              
+              public void setName(String name) {
+                  this.name = name;
+              }
+              
+              public String getEmail() {
+                  return email;
+              }
+              
+              public void setEmail(String email) {
+                  this.email = email;
+              }
+              
+              public String getAddress() {
+                  return address;
+              }
+              
+              public void setAddress(String address) {
+                  this.address = address;
+              }
+              
+              public String getPhoneNumber() {
+                  return phoneNumber;
+              }
+              
+              public void setPhoneNumber(String phoneNumber) {
+                  this.phoneNumber = phoneNumber;
+              }
+          }
+          
+          </code>
+      </pre>
+        <button id="copy-button">Copy</button>
+      </div>
+
+      <div class="coms2">
+        <p>In this example, the Customer class serves as a data container with attributes representing customer </p>
+        <p>information, but it lacks meaningful behavior or logic associated with customers. It simply provides </p> 
+        <p>getters and setters for accessing and modifying its data.</p> 
+        <p>If the Customer class remains like this and doesn't have any methods related to customer operations</p>
+        <p>(e.g., methods for placing orders, processing payments, etc.), it could be considered a code smell</p>  
+        <p>because it doesn't fully encapsulate the behavior related to its concept. In such cases, it might</p>   
+        <p>be more appropriate to rethink the design and consider whether the class should have more behavior</p>  
+        <p>or if its responsibilities should be distributed across other classes.</p>
+      </div>
+
     </div>
 
     <div class="dead" id="dead">
+
+      <h1 class="titleDu">Dead Code</h1>
+      <img src="./Images/dead.png" alt="" class="img">
+      <div class="coms1">
+        <p>HUAAA... I already make a really long code, but I don't know what's meaning of this code</p>
+        <p>What is this for? Is this really usefull for the program? But when the program is running,</p>
+        <p>the code that I already make is not executed by the program. Damn... :')</p>
+      </div>
+
+      <div class="coms2">
+        <p>That's call "Dead Code", when the code is not used or executed by your application.</p>
+        <p>This bad code smell can happends when we are developing process</p>
+      </div>
+
+      <h2 class="exam1">Example</h2>
+
+      <div class="code-wrapper">
+        <pre>
+          <code id="code">
+            public class Calculator {
+    
+              // This method is never called
+              public int add(int a, int b) {
+                  // Dead code
+                  int result = a + b;
+                  return result;
+              }
+              
+              // This method is never called
+              public int subtract(int a, int b) {
+                  // Dead code
+                  int result = a - b;
+                  return result;
+              }
+              
+              public int multiply(int a, int b) {
+                  // This method is called
+                  int result = a * b;
+                  return result;
+              }
+              
+              public int divide(int a, int b) {
+                  // This method is called
+                  if (b == 0) {
+                      throw new IllegalArgumentException("Cannot divide by zero");
+                  }
+                  int result = a / b;
+                  return result;
+              }
+          }          
+      
+          </code>
+      </pre>
+        <button id="copy-button">Copy</button>
+      </div>
+
+      <div class="coms2">
+        <p>In the example above, the add and subtract methods are never called. Therefore,</p>
+        <p>you can safely remove them from the Calculator class.</p>
+        <p>As the codebase evolves, methods or blocks of code that were once necessary may become obsolete.</p>    
+      </div>
+
+      <h2 class="exam1">Solution</h2>
+
+      <div class="code-wrapper">
+        <pre>
+          <code id="code">
+            public class Calculator {
+    
+              public int multiply(int a, int b) {
+                  // This method is called
+                  int result = a * b;
+                  return result;
+              }
+              
+              public int divide(int a, int b) {
+                  // This method is called
+                  if (b == 0) {
+                      throw new IllegalArgumentException("Cannot divide by zero");
+                  }
+                  int result = a / b;
+                  return result;
+              }
+          }   
+          </code>
+      </pre>
+        <button id="copy-button">Copy</button>
+      </div>
+
+      <div class="coms2">
+        <p>By removing dead code, you reduce clutter in the codebase and make it easier</p>   
+        <p>for developers to understand and maintain the application.</p>
+      </div>
+
+    </div>
       
     </div>
 
     <div class="general" id="general">
+
+      <h1 class="titleDu">Speculative Generality</h1>
+      <img src="./Images/speculative.png" alt="" class="img">
+      <div class="coms1">
+       <p>Hmm... Do I need this code in the future?? I'm not sure this will be useful.</p>
+       <p>But what if I need later?</p>
+      </div>
+
+      <div class="coms2">
+        <p>Well yes, usually a lot of proggrammers, make class, method, field or parameter even</p>
+        <p>though this is not in the requirement. But yes a lot of proggramers just make this for</p>
+        <p>their own speculation, and they are not really sure if this is need in the future.</p>
+        <p>So this is call speculative generality, this is can become a problem, because the code</p>
+        <p>that are not useful instead of deleted it, can make other people confused when they are</p>
+        <p>trying to read it. This is remind me of people with anxiety, is like same sitution with</p>
+        <p>this bad code</p>
+      </div>
+
+      <h2 class="exam1">Example</h2>
+
+      <div class="code-wrapper">
+        <pre>
+          <code id="code">
+            public interface Animal {
+              void eat();
+              void sleep();
+              void makeSound();
+          }
+          
+          public class Dog implements Animal {
+              @Override
+              public void eat() {
+                  System.out.println("Dog is eating");
+              }
+          
+              @Override
+              public void sleep() {
+                  System.out.println("Dog is sleeping");
+              }
+          
+              @Override
+              public void makeSound() {
+                  System.out.println("Bark");
+              }
+          }
+          
+          public class Cat implements Animal {
+              @Override
+              public void eat() {
+                  System.out.println("Cat is eating");
+              }
+          
+              @Override
+              public void sleep() {
+                  System.out.println("Cat is sleeping");
+              }
+          
+              @Override
+              public void makeSound() {
+                  System.out.println("Meow");
+              }
+          }
+          
+          public class AnimalApp {
+              public static void main(String[] args) {
+                  Animal dog = new Dog();
+                  dog.eat();
+                  dog.sleep();
+                  dog.makeSound();
+          
+                  Animal cat = new Cat();
+                  cat.eat();
+                  cat.sleep();
+                  cat.makeSound();
+              }
+          }          
+          </code>
+      </pre>
+        <button id="copy-button">Copy</button>
+      </div>
+
+      <div class="coms2">
+        <p>In this example, we have an Animal interface with methods eat(), sleep(), and</p>
+        <p>makeSound(). We then have concrete implementations for Dog and Cat. However,</p>
+        <p>at the current stage, there's no apparent need for an Animal interface as both</p>
+        <p>Dog and Cat classes provide similar functionality.</p>
+      </div>
+      <h2 class="exam1">Solution</h2>
+      <div class="coms2">
+        <p>If the abstraction isn't currently needed or likely to be needed in the future,</p>
+        <p>it's better to remove it to simplify the code. However, if there's a genuine need</p>
+        <p> for abstraction, ensure that it's driven by real requirements and not just</p>
+        <p>speculative thinking</p>
+      </div>
+
+      <div class="code-wrapper">
+        <pre>
+          <code id="code">
+            public class Dog {
+              public void eat() {
+                  System.out.println("Dog is eating");
+              }
+          
+              public void sleep() {
+                  System.out.println("Dog is sleeping");
+              }
+          
+              public void makeSound() {
+                  System.out.println("Bark");
+              }
+          }
+          
+          public class Cat {
+              public void eat() {
+                  System.out.println("Cat is eating");
+              }
+          
+              public void sleep() {
+                  System.out.println("Cat is sleeping");
+              }
+          
+              public void makeSound() {
+                  System.out.println("Meow");
+              }
+          }
+          
+          public class AnimalApp {
+              public static void main(String[] args) {
+                  Dog dog = new Dog();
+                  dog.eat();
+                  dog.sleep();
+                  dog.makeSound();
+          
+                  Cat cat = new Cat();
+                  cat.eat();
+                  cat.sleep();
+                  cat.makeSound();
+              }
+          }          
+          </code>
+      </pre>
+        <button id="copy-button">Copy</button>
+      </div>
+
+      <div class="coms2">
+        <p>In this refactored version, we removed the Animal interface and directly</p>   
+        <p>used Dog and Cat. classes. This simplifies the code and eliminates</p>
+        <p>speculative generality.</p>
+      </div>      
       
     </div>
-
 
   </div>
 
